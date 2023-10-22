@@ -1,0 +1,341 @@
+/*PANTALLA CHICA*/
+@media (min-width: 480px) {
+    
+    /*COMUNES*/
+
+    body{
+        height: 100%;
+        margin: 0;
+        line-height: 1;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    img{
+        display: block;
+        margin: auto;
+    }
+
+    .container{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /*HEADER*/
+    nav{
+        background-color: #892be23b;
+        border-bottom: 2px solid  #892be2bd;
+        border-radius: 10px;
+        font-size: x-large;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    .logo{
+        max-width: 10rem;
+        padding-left: 20px;
+    }
+
+    /*INDEX*/
+
+    #detalle img{
+        max-width: 100%;
+        padding-top: 1rem;
+    }
+
+    .container-productos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-bottom: 4rem;
+    }
+
+    .item{
+        border: 2px solid #260942;
+        border-radius: 30px;
+        margin: 2rem;
+        padding: 1rem 2rem 0 2rem;
+        align-self: center;
+
+    }
+
+    .item img{
+        max-width: 9rem;
+    }
+
+    .item h2{
+        font-weight: 100;
+        text-align: center;
+        font-size:x-large;
+    }
+
+    h1{
+        margin: 2rem;
+        padding-top: 5rem;
+        font-weight: 500;
+        font-size:xx-large;
+        text-align: center;
+    }
+
+    .container-fluid-contacto{
+        background-color: #bcaacc;
+        padding: 3rem;
+    }
+
+    .contactos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: 700;
+        font-size: x-large;
+    }
+
+    .item-contacto img{
+        max-width: 4rem;
+        background-color: #ffffff;
+        border-radius: 100px;
+    }
+    
+    .item-contacto{
+        padding: 1rem;
+    }
+
+    /*FOOTER*/
+
+    footer{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer p{
+        align-self: center;
+        padding: 1rem 1rem 0 1rem;
+        font-size: x-large;
+    }
+
+    .redes{
+        display: flex;
+    }
+
+    .redes a img{
+        max-width: 50px;
+    }
+
+    /*NOSOTROS*/
+
+    .main-nos{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        font-size: x-large;
+        padding-top: 3rem;
+    }
+
+    .container-servicios, .container-sobrenosotros {
+        text-align: justify;
+        line-height: 30px;
+    }
+
+    .sobrenosotros{
+        width: 80%;
+    }
+
+    main div h1{
+        font-weight: 700;
+        font-size:x-large;
+        text-decoration:underline #492868 ;
+    }
+
+    .servicios{
+        border: 2px solid #260942;
+        border-radius: 30px;
+        margin: 1rem;
+        padding: 1rem;
+        background-color: #2609422a;
+        text-align: center;
+    }
+
+    .item-servicio{
+        list-style-image: url("img/lapiz.png");
+        list-style-position:inside;
+        text-align: left;
+    }
+
+    /*CONTACTO*/
+    .formulario{
+        margin: 4rem 0 4rem 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .h1-form{
+        padding-top: 2rem;
+    }
+
+    form{
+        padding:1rem 2rem 1rem 2rem;
+        border: 1px solid #260942;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        font-weight: 700;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input:not([type="submit"]), textarea {    
+        padding: 1rem;
+        display: block;
+        width: 100%;
+        background-color: #bcaacca8;
+        margin-bottom: 2rem;
+        border: none;
+        border-radius: 5px;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    .enviar{
+        padding: 5px;
+        margin: 1rem;
+        color: white;
+        background-color: #492868;
+        border-radius: 5px;
+        align-self: center;
+    }
+
+    /*FOOTER NOSOTROS Y CONTACTO*/    
+    .foot-distinto{
+        border-top: 2px solid;
+    }
+
+    /*ANIMACIONES*/
+
+    @keyframes show {
+        from{
+            opacity: 0;
+            scale: 25%;
+        }
+
+        to {
+            opacity: 1;
+            scale: 100%;
+        }
+    }
+
+    @keyframes animation {
+        0% {
+          opacity: 0;
+          left: -700px;
+        }
+  
+        100% {
+          opacity: 1;
+          left: 0;
+        }
+      }
+
+    .item, .container-contacto {
+        view-timeline-name: --detalle;
+        view-timeline-axis: block;
+        animation-timeline: --detalle;
+        animation-name: show;
+        animation-range: entry 70% cover 50%;
+        animation-fill-mode: both;
+    }
+
+    .servicios{
+        position: relative;
+        animation: animation 2s ease-out;
+    }
+}
+
+/*PANTALLA MEDIA*/
+
+@media (min-width: 720px){
+
+    /*INDEX*/
+    .container-productos{
+        flex-direction: row;
+    }
+
+    .item img{
+        max-width: 10rem;
+    }
+
+    .item h2{
+        font-size:xx-large;
+    }
+    
+    .contactos{
+        font-size: x-large;
+    }
+
+    .item-contacto img{
+        max-width: 4rem;
+    }
+
+    /*FOOTER*/
+
+    footer p{
+        font-size: x-large;
+    }
+
+    .redes a img{
+        max-width: 3rem;
+    }
+
+    
+}
+
+@media (min-width: 1040px) {
+
+    /*HEADER*/
+
+    nav{
+        font-size: large;
+    }
+
+    /*INDEX*/
+
+    .contactos{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .container-contacto{
+        max-width: 1320px;
+    }
+
+    /*FOOTER*/
+
+    footer p{
+        font-size: large;
+    }
+
+    .redes a img{
+        max-width: 2rem;
+    }
+
+    .main-nos{
+        flex-flow: row nowrap;
+    }
+    
+    .container-sobrenosotros {
+        margin: 2rem 2rem 5rem 2rem;
+    }
+    
+    .servicios{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding: 0;
+        align-self: center;
+    }
+    
+
+}
